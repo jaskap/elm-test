@@ -1,0 +1,156 @@
+var _elm_lang$elm_architecture_tutorial$Main$print = F2(
+	function (message, value) {
+		return A2(
+			_elm_lang$core$Basics_ops['++'],
+			message,
+			_elm_lang$core$Basics$toString(value));
+	});
+var _elm_lang$elm_architecture_tutorial$Main$increment = function (n) {
+	return n + 1;
+};
+var _elm_lang$elm_architecture_tutorial$Main$add = F2(
+	function (a, b) {
+		return a + b;
+	});
+var _elm_lang$elm_architecture_tutorial$Main$centigradeToFahrenheit = function (c) {
+	return ((c * 9) / 5) + 32;
+};
+var _elm_lang$elm_architecture_tutorial$Main$sqr = function (n) {
+	return n * n;
+};
+var _elm_lang$elm_architecture_tutorial$Main$isEven = function (n) {
+	return _elm_lang$core$Native_Utils.eq(
+		A2(_elm_lang$core$Basics_ops['%'], n, 2),
+		0);
+};
+var _elm_lang$elm_architecture_tutorial$Main$l2 = {
+	ctor: '::',
+	_0: 1,
+	_1: {
+		ctor: '::',
+		_0: 2,
+		_1: {
+			ctor: '::',
+			_0: 3,
+			_1: {
+				ctor: '::',
+				_0: 4,
+				_1: {ctor: '[]'}
+			}
+		}
+	}
+};
+var _elm_lang$elm_architecture_tutorial$Main$l1 = {
+	ctor: '::',
+	_0: 1,
+	_1: {
+		ctor: '::',
+		_0: 2,
+		_1: {
+			ctor: '::',
+			_0: 3,
+			_1: {ctor: '[]'}
+		}
+	}
+};
+var _elm_lang$elm_architecture_tutorial$Main$l3 = A2(
+	_elm_lang$core$List$concatMap,
+	function (f) {
+		return A2(_elm_lang$core$List$map, f, _elm_lang$elm_architecture_tutorial$Main$l2);
+	},
+	A2(
+		_elm_lang$core$List$map,
+		F2(
+			function (v0, v1) {
+				return {ctor: '_Tuple2', _0: v0, _1: v1};
+			}),
+		_elm_lang$elm_architecture_tutorial$Main$l1));
+var _elm_lang$elm_architecture_tutorial$Main$firstTenPowersOfTwo = A2(
+	_elm_lang$core$List$map,
+	F2(
+		function (x, y) {
+			return Math.pow(x, y);
+		})(2),
+	{
+		ctor: '::',
+		_0: 1,
+		_1: {
+			ctor: '::',
+			_0: 2,
+			_1: {
+				ctor: '::',
+				_0: 3,
+				_1: {ctor: '[]'}
+			}
+		}
+	});
+var _elm_lang$elm_architecture_tutorial$Main$power = F2(
+	function (x, y) {
+		return (_elm_lang$core$Native_Utils.cmp(y, 1) < 0) ? 1 : (x * A2(_elm_lang$elm_architecture_tutorial$Main$power, x, y - 1));
+	});
+var _elm_lang$elm_architecture_tutorial$Main$hemachandra = function (n) {
+	return _elm_lang$core$Native_Utils.eq(n, 0) ? 1 : (_elm_lang$core$Native_Utils.eq(n, 1) ? 1 : (_elm_lang$elm_architecture_tutorial$Main$hemachandra(n - 1) + _elm_lang$elm_architecture_tutorial$Main$hemachandra(n - 2)));
+};
+var _elm_lang$elm_architecture_tutorial$Main$facR = function (n) {
+	return (_elm_lang$core$Native_Utils.cmp(n, 1) < 0) ? 1 : (n * _elm_lang$elm_architecture_tutorial$Main$facR(n - 1));
+};
+var _elm_lang$elm_architecture_tutorial$Main$helloWorldPic = A2(
+	_elm_lang$html$Html$img,
+	{
+		ctor: '::',
+		_0: _elm_lang$html$Html_Attributes$src('http://sourcefed.com/wp-content/uploads/2014/12/world.jpg'),
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$style(
+				{
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'width', _1: '500px'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'height', _1: '400px'},
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		}
+	},
+	{ctor: '[]'});
+var _elm_lang$elm_architecture_tutorial$Main$astyledMessage = A2(
+	_elm_lang$html$Html$div,
+	{
+		ctor: '::',
+		_0: _elm_lang$html$Html_Attributes$style(
+			{
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: 'font-style', _1: 'bold'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: 'font-size', _1: '15px'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'color', _1: 'black'},
+						_1: {ctor: '[]'}
+					}
+				}
+			}),
+		_1: {ctor: '[]'}
+	},
+	{
+		ctor: '::',
+		_0: _elm_lang$html$Html$text(
+			A2(_elm_lang$elm_architecture_tutorial$Main$print, 'sdd ', _elm_lang$elm_architecture_tutorial$Main$l3)),
+		_1: {ctor: '[]'}
+	});
+var _elm_lang$elm_architecture_tutorial$Main$main = _elm_lang$virtual_dom$Native_VirtualDom.staticProgram(
+	A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$elm_architecture_tutorial$Main$astyledMessage,
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$elm_architecture_tutorial$Main$helloWorldPic,
+				_1: {ctor: '[]'}
+			}
+		}));
