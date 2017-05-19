@@ -49,7 +49,7 @@ power x y =
 
 firstTenPowersOfTwo = List.map ((^)2) [1,2,3]
 
-l1 = [1,2,3]
+l1 = [1,2,3,4,5]
 l2 = [1,2,3,4]
 
 l3 = concatMap (\f -> List.map f l2) (List.map (,) l1)
